@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peachai/constants.dart';
 import 'package:peachai/screens/welcome_screen.dart';
 
 void main() {
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Peach AI',
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
+      theme: ThemeData(
+        primaryColor: primary,
+      ),
     );
   }
 }

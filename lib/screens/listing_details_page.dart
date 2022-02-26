@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:peachai/constants.dart';
 import 'package:peachai/models/listing.dart';
+import 'package:peachai/screens/manage_applicants/manage_applicants.dart';
 import 'package:peachai/widgets/filled_outline_button.dart';
 import 'package:peachai/widgets/main_button.dart';
 
@@ -192,7 +193,14 @@ class ListingDetailsPage extends StatelessWidget {
                     Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: MainButton(
-                          press: () {},
+                          press: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return ManageApplicationsPage(
+                                applicants: listing.applicants,
+                              );
+                            }));
+                          },
                           text: "Manage Applicants",
                           color: secondary,
                         )),
