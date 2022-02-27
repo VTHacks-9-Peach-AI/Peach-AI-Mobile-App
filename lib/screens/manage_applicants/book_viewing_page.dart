@@ -83,6 +83,10 @@ class _BookViewingPageState extends State<BookViewingPage> {
               color: isElementSelected() ? primary : Colors.grey,
               press: () {
                 // Do a peach AI
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text(
+                      'We started booking viewing for selected candidates. Please be patient.'),
+                ));
               }),
         )
       ]),

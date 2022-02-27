@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Peach AI',
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
-      theme: ThemeData(
-        primaryColor: primary,
-      ),
+      theme: ThemeData(primaryColor: primary, fontFamily: 'ValeraRound'),
     );
   }
 }
